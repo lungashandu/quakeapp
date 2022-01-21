@@ -1,26 +1,28 @@
 package com.example.quakeapp;
 
-public class Earthquakes {
-    private String mMag;
-    private String mLocation;
-    private String mDate;
 
-    public Earthquakes(String mag, String location, String date) {
+public class Earthquakes {
+    private double mMag;
+    private String mLocation;
+    private long mTimeInMilliseconds;
+
+
+    public Earthquakes(double mag, String location, long timeInMilliseconds) {
         this.mMag = mag;
         this.mLocation = location;
-        this.mDate = date;
+        this.mTimeInMilliseconds = timeInMilliseconds;
     }
 
-    public String getmMag() {
+    public double getMag() {
         return mMag;
     }
 
-    public String getmLocation() {
-        return mLocation;
+    public String getLocation() { return mLocation; }
+
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
-    public String getmDate() {
-        return mDate;
-    }
+
 
 }

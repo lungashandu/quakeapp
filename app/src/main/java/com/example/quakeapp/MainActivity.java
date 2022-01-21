@@ -14,17 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ArrayList<Earthquakes> quakes = new ArrayList<Earthquakes>();
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
-        quakes.add(new Earthquakes("4", "Los Angeles", "11 Jan 2022"));
+        ArrayList<Earthquakes> quakes = QueryUtils.extractEarthquakes();
 
         // Create a new {@link ArrayAdapter} of earthquakes
         QuakeAdaptor adapter = new QuakeAdaptor(this, quakes);
