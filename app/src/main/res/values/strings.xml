@@ -3,4 +3,5 @@
     <string name="sampleMag">4</string>
     <string name="sampleLocation">Los Angeles, CA</string>
     <string name="sampleDate">11 Jan 2022</string>
+    <string name="nearThe">Near the</string>
 </resources>
