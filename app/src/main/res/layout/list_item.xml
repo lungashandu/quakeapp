@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="64dp"
+    android:layout_height="?android:attr/listPreferredItemHeight"
     android:orientation="horizontal">
 
     <TextView
@@ -31,14 +31,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textSize="16sp"
+            android:textSize="12sp"
             tools:text="Los Angeles, CA"/>
 
         <TextView
             android:id="@+id/primaryLocationTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/purple_700"
@@ -59,16 +59,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="end"
-            android:textSize="16sp"
+            android:textSize="12sp"
             tools:text="11 Jan 2022"/>
 
         <TextView
             android:id="@+id/timeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:gravity="end"
-            android:textSize="16sp"
+            android:textSize="12sp"
             tools:text="00:00"/>
 
     </LinearLayout>

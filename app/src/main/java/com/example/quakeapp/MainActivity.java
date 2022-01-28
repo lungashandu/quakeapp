@@ -1,5 +1,7 @@
 package com.example.quakeapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -20,10 +22,17 @@ public class MainActivity extends AppCompatActivity {
         QuakeAdaptor adapter = new QuakeAdaptor(this, quakes);
 
         // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+        ListView earthquakeListView = findViewById(R.id.list);
 
         //Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
+
+        earthquakeListView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Earthquakes earthquakes = quakes.get(i);
+
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(earthquakes.getUrl()));
+            startActivity(intent);
+        });
     }
 }
