@@ -3,38 +3,77 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="?android:attr/listPreferredItemHeight"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/magnitudeTextView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:gravity="center_vertical"
-        android:textSize="24sp"
-        tools:text="4"/>
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:background="@drawable/magnitude_circle"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:text="8.9"/>
 
-    <TextView
-        android:id="@+id/locationTextView"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="match_parent"
         android:layout_marginEnd="8dp"
         android:layout_weight="2"
-        android:gravity="center_vertical"
-        android:textSize="16sp"
-        tools:text="Los Angeles, CA"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/dateTextView"
+        <TextView
+            android:id="@+id/locationOffsetTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            tools:text="Los Angeles, CA"/>
+
+        <TextView
+            android:id="@+id/primaryLocationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            tools:text="Los Angeles, CA"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="match_parent"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:textSize="16sp"
-        tools:text="11 Jan 2022"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:textSize="12sp"
+            tools:text="11 Jan 2022"/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="end"
+            android:textSize="12sp"
+            tools:text="00:00"/>
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>
