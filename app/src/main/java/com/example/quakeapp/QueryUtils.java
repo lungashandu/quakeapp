@@ -13,7 +13,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +32,10 @@ public final class QueryUtils {
 
     /**
      * Query the USGS dataset and return an {@link Earthquakes} object to represent earthquakes
-     * @return
+     * @return List<Earthquakes>
      */
     public static List<Earthquakes> fetchEarthquakeData(String requestUrl){
-        // Create URL object
+        /* Create URL object */
         URL url = createUrl(requestUrl);
 
         // Perform HTTP request to the URL and receive a JSON response back
@@ -47,10 +46,9 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Error closing input stream ", e);
         }
         // Extract relevant fields from the JSON response and create an {@link Earthquake} object
-        List<Earthquakes> earthquakes = extractFeatureFromJSON(JSONResponse);
 
         // Return the object
-        return earthquakes;
+        return extractFeatureFromJSON(JSONResponse);
     }
 
     /**
