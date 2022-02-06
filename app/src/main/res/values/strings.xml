@@ -4,4 +4,6 @@
     <string name="sampleLocation">Los Angeles, CA</string>
     <string name="sampleDate">11 Jan 2022</string>
     <string name="nearThe">Near the</string>
+    <string name="empty">No Earthquake Found</string>
+    <string name="noConnection">No Internet Connection</string>
 </resources>
